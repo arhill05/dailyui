@@ -173,6 +173,7 @@ button.button-primary {
     flex-direction: column;
     height: 55%;
     left: -2px;
+    min-height: fit-content;
     padding: 16px;
     position: relative;
     z-index: 1000;
@@ -189,6 +190,7 @@ button.button-primary {
     flex-direction: column;
     height: 70%;
     justify-content: center;
+    min-height: fit-content;
     padding: 16px;
     z-index: 500;
     p {

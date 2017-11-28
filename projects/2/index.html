@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CC Checkout | DailyUI</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <section id="checkout">
+        <div class="item-description">
+            <img src="img/pok3r.png" alt="">
+            <h2>POK3R Keyboard</h2>
+            <p>
+                <strong>Cherry MX Blues</strong> //
+                <strong>$129.99</strong> //
+                <strong>4 in stock</strong>
+            </p>
+            <p>Annoy your coworkers with this super clacky keyboard. Be all the rage around your nerd friends when you buy a
+                set of keycaps worth twice as much as the keyboard. Light up the night with the exquisite RGB lighting. Be
+                a real hacker with four programmable layers.
+            </p>
+        </div>
+        <div class="payment-info">
+            <h1>Checkout</h1>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <div class="card-number-inputs">
+                    <input maxlength="4" type="text" placeholder="xxxx" />
+                    <input maxlength="4" type="text" placeholder="xxxx" />
+                    <input maxlength="4" type="text" placeholder="xxxx" />
+                    <input maxlength="4" type="text" placeholder="xxxx" />
+                </div>
+            </div>
+            <div class="container">
+                <div class="form-group two-third">
+                    <label for="expiration-date">Expiration</label>
+                    <div class="expiration">
+                        <select name="exp-month" id="exp-month">
+                            <option value="1">01</option>
+                        </select>
+                        <select name="exp-year" id="exp-year">
+                            <option value="17">17</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group one-third">
+                    <label for="CVV">CVV</label>
+                    <input maxlength="3" placeholder="123" type="text" />
+                </div>
+            </div>
+            <div class="form-group price">
+                <div class="row">
+                    <div>Price</div>
+                    <div>$129.99</div>
+                </div>
+                <div class="row">
+                    <div>Shipping</div>
+                    <div>$12.99</div>
+                </div>
+                <div class="row">
+                    <div>Taxes</div>
+                    <div>$7.80</div>
+                </div>
+                <div class="row">
+                    <h2>Total</h2>
+                    <h2>$150.78</h2>
+                </div>
+            </div>
+            <button class="button-primary">Complete Purchase</button>
+        </div>
+    </section>
+</body>
+
+</html>

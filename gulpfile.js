@@ -1,23 +1,28 @@
 const gulp = require('gulp');
+const util = require('gulp-util');
 const sass = require('gulp-sass');
 const bs = require('browser-sync').create();
 
 gulp.task('browser-sync', ['sass'], function() {
+    console.log(util.env.project);
+    const directory = util.env.project ? `projects/${util.env.project.toString()}` : '';
     bs.init({
         server: {
-            baseDir: "./"
+            baseDir: `./${directory}`
         }
     });
 });
 
 gulp.task('sass', function() {
-    gulp.src('scss/*.scss')
+    const directory = util.env.project.toString() ? `projects/${util.env.project.toString()}` : '';
+    gulp.src(`${directory}/scss/*.scss`)
     .pipe(sass())
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest(`${directory}/css`))
     .pipe(bs.reload({stream: true}));
 })
 
 gulp.task('default', ['sass', 'browser-sync'], function() {
-    gulp.watch('scss/*.scss', ['sass']);
-    gulp.watch('*.html').on('change', bs.reload);
+    const directory = util.env.project ? `projects/${util.env.project}` : '';
+    gulp.watch(`${directory}/scss/*.scss`, ['sass']);
+    gulp.watch(`${directory}/*.html`).on('change', bs.reload);
 })

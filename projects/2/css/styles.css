@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=Francois+One|Lato:400,700");
+body {
+  align-items: center;
+  color: #261C15;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif; }
+
+h1 {
+  font-size: 1.8rem; }
+
+h2 {
+  font-size: 1.5rem; }
+
+h3 {
+  font-size: 1.2rem; }
+
+h1,
+h2,
+h3 {
+  color: #261C15;
+  font-family: 'Francois One', cursive;
+  font-weight: 700;
+  margin: 8px 0; }
+
+#checkout {
+  display: flex;
+  align-items: center;
+  width: 80%; }
+
+button.button-primary {
+  border: none;
+  border-radius: 4px;
+  background-color: #EF2917;
+  color: #f3f3f3;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-right: 3px solid #ae190c;
+  border-bottom: 3px solid #ae190c; }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%; }
+  .container .two-third {
+    flex: 2 2 65%;
+    margin-right: 32px; }
+  .container .one-third {
+    flex: 1 1 20%; }
+    .container .one-third input {
+      width: 100%; }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  font-weight: 700;
+  margin: 16px 0; }
+  .form-group label {
+    padding: 4px 8px; }
+  .form-group input,
+  .form-group select {
+    background-color: #ffbd8b;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    border: none;
+    padding: 8px;
+    height: 32px;
+    width: 66%; }
+    .form-group input::placeholder,
+    .form-group select::placeholder {
+      letter-spacing: 2px;
+      color: #997155; }
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none; }
+  .form-group .card-number-inputs {
+    display: flex; }
+    .form-group .card-number-inputs input {
+      text-align: center; }
+      .form-group .card-number-inputs input:first-child {
+        margin: 0 4px 0 0; }
+      .form-group .card-number-inputs input:not(:first-child) {
+        margin: 0 4px; }
+      .form-group .card-number-inputs input:last-child {
+        margin: 0 0 0 4px; }
+  .form-group .expiration {
+    display: flex; }
+    .form-group .expiration select {
+      flex: 1; }
+      .form-group .expiration select:first-child {
+        margin-right: 8px; }
+  .form-group.price .row {
+    display: flex;
+    justify-content: space-between; }
+
+.payment-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #be5200;
+  border-left: none;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 16px;
+  background: linear-gradient(90deg, #ff7a15, #ff8c34);
+  flex: 3;
+  position: relative;
+  left: -2px;
+  height: 55%;
+  box-shadow: 10px 12px 16px 2px #ffae71;
+  z-index: 1000; }
+
+.item-description {
+  box-shadow: 10px 12px 16px 2px #ffae71;
+  border: 2px solid #be5200;
+  padding: 16px;
+  flex: 5;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #D75D00, #ff7a15);
+  background-color: #D75D00;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  z-index: 500; }
+  .item-description p {
+    max-width: 65%; }
+  .item-description img {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    box-shadow: 4px 4px 3px 2px rgba(0, 0, 0, 0.2);
+    margin: 32px;
+    max-height: 50%;
+    max-width: 70%; }

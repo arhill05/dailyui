@@ -42,12 +42,13 @@ input {
 }
 
 .material-icons {
+    margin: 0 16px;
     font-size: 28px;
 }
 .form-group {
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
+    justify-content: center;
     margin: 32px;
     width: 80%;
     input[type="text"],
@@ -55,15 +56,14 @@ input {
     input[type="password"] {
         background: none;
         border: none;
-        border-bottom: 2px solid $light-blue;
+        border-bottom: 2px solid darken($light-blue, 25%);
         font-size: 1rem;
-        min-width: 75%;
+        min-width: 65%;
         padding: 4px 0;
         transition: all 0.3s ease;
         &:focus {
-            font-size: 1.1rem;
+            border-bottom: 2px solid $light-blue;
             outline: none;
-            padding: 6px 0;
             transition: all 0.3s ease;
         }
     }
@@ -73,17 +73,18 @@ h1,
 h2,
 h3 {
     margin: 8px;
-    font-family: 'Kalam', cursive;
     text-align: center;
     font-weight: 700;
 }
 
 h1 {
     font-size: 2.5rem;
+    font-family: 'Kalam', cursive;
 }
 
 h2 {
     font-size: 2rem;
+    font-family: 'Lato', sans-serif;
 }
 
 h3 {

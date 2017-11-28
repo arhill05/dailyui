@@ -129,7 +129,8 @@ button.button-primary {
   height: 70%;
   z-index: 500; }
   .item-description p {
-    max-width: 65%; }
+    max-width: 65%;
+    text-align: center; }
   .item-description img {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 2px;
@@ -137,3 +138,17 @@ button.button-primary {
     margin: 32px;
     max-height: 50%;
     max-width: 70%; }
+
+@media screen and (max-width: 696px) {
+  #checkout {
+    display: block;
+    width: 100%; }
+  .payment-info, .item-description {
+    margin: 0 0 32px 0;
+    box-shadow: 0px 12px 16px 2px #ffae71;
+    position: initial;
+    border-left: none;
+    border-right: none;
+    border-radius: 0; }
+  .item-description p {
+    max-width: 85%; } }

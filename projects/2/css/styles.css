@@ -4,10 +4,10 @@ body {
   color: #261C15;
   display: flex;
   flex-direction: column;
+  font-family: 'Lato', sans-serif;
   justify-content: center;
   margin: 0;
-  padding: 0;
-  font-family: 'Lato', sans-serif; }
+  padding: 0; }
 
 h1 {
   font-size: 1.8rem; }
@@ -24,22 +24,31 @@ h3 {
   color: #261C15;
   font-family: 'Francois One', cursive;
   font-weight: 700;
-  margin: 8px 0; }
+  margin: 32px 0 0 0; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+
+li {
+  padding: 4px 0; }
 
 #checkout {
-  display: flex;
   align-items: center;
+  display: flex;
   width: 80%; }
 
 button.button-primary {
+  background-color: #05A8AA;
   border: none;
   border-radius: 4px;
-  background-color: #EF2917;
+  border-right: 3px solid #035f60;
+  border-bottom: 3px solid #035f60;
   color: #f3f3f3;
   font-weight: 700;
-  padding: 8px 16px;
-  border-right: 3px solid #ae190c;
-  border-bottom: 3px solid #ae190c; }
+  padding: 8px 16px; }
 
 .container {
   display: flex;
@@ -55,30 +64,39 @@ button.button-primary {
     .container .one-third input {
       width: 100%; }
 
+.flex-wrap-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 16px;
+  justify-content: center; }
+  .flex-wrap-container p {
+    width: 40%;
+    padding: 8px 24px; }
+
 .form-group {
   display: flex;
   flex-direction: column;
-  min-height: fit-content;
-  width: 80%;
   font-weight: 700;
-  margin: 16px 0; }
+  margin: 16px 0;
+  min-height: fit-content;
+  width: 80%; }
   .form-group label {
     padding: 4px 8px; }
   .form-group input,
   .form-group select {
     background-color: #ffbd8b;
-    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
     border: none;
-    padding: 8px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
     height: 32px;
+    padding: 8px;
     width: 66%; }
-    .form-group input::placeholder,
-    .form-group select::placeholder {
-      letter-spacing: 2px;
-      color: #997155; }
     .form-group input:focus,
     .form-group select:focus {
       outline: none; }
+    .form-group input::placeholder,
+    .form-group select::placeholder {
+      color: #997155; }
   .form-group .card-number-inputs {
     display: flex; }
     .form-group .card-number-inputs input {
@@ -96,41 +114,50 @@ button.button-primary {
       .form-group .expiration select:first-child {
         margin-right: 8px; }
   .form-group.price .row {
+    text-align: right;
     display: flex;
-    justify-content: space-between; }
+    justify-content: flex-end; }
+    .form-group.price .row .price-heading {
+      margin: 4px 8px;
+      width: 25%;
+      text-align: right; }
+    .form-group.price .row .price-number {
+      margin: 4px 8px;
+      width: 25%;
+      text-align: left; }
 
 .payment-info {
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  background: linear-gradient(90deg, #ff7a15, #ff8c34);
   border: 2px solid #be5200;
   border-left: none;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
-  padding: 16px;
-  background: linear-gradient(90deg, #ff7a15, #ff8c34);
+  box-shadow: 10px 12px 16px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
   flex: 3;
-  position: relative;
-  left: -2px;
+  flex-direction: column;
   height: 55%;
-  box-shadow: 10px 12px 16px 2px #ffae71;
+  left: -2px;
+  padding: 16px;
+  position: relative;
   z-index: 1000; }
 
 .item-description {
-  box-shadow: 10px 12px 16px 2px #ffae71;
-  border: 2px solid #be5200;
-  padding: 16px;
-  flex: 5;
-  border-radius: 12px;
   align-items: center;
-  justify-content: center;
   background: linear-gradient(90deg, #D75D00, #ff7a15);
-  background-color: #D75D00;
+  border: 2px solid #be5200;
+  border-radius: 12px;
+  box-shadow: 10px 12px 16px 2px rgba(0, 0, 0, 0.2);
   display: flex;
+  flex: 5;
   flex-direction: column;
   height: 70%;
+  justify-content: center;
+  padding: 16px;
   z-index: 500; }
   .item-description p {
+    margin: 0;
     max-width: 65%;
     text-align: center; }
   .item-description img {
@@ -145,13 +172,16 @@ button.button-primary {
   #checkout {
     display: block;
     width: 100%; }
-  .payment-info, .item-description {
-    margin: 0 0 32px 0;
-    box-shadow: 0px 12px 16px 2px #ffae71;
-    position: initial;
+  .payment-info,
+  .item-description {
     border-left: none;
     border-right: none;
     border-radius: 0;
-    height: auto; }
+    box-shadow: 0px 12px 12px 2px rgba(0, 0, 0, 0.2);
+    height: auto;
+    margin: 0 0 32px 0;
+    position: initial; }
   .item-description p {
-    max-width: 85%; } }
+    max-width: 85%; }
+  .flex-wrap-container p {
+    width: 85%; } }

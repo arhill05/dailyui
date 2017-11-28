@@ -37,6 +37,8 @@ input {
     height: 75%;
     padding: 32px;
     width: 25%;
+    min-height: fit-content;
+    min-width: fit-content;
 }
 
 .material-icons {
@@ -93,6 +95,8 @@ form {
     flex-direction: column;
     align-items: center;
     margin-top: 64px;
+    min-height: fit-content;
+    min-width: fit-content;
 }
 
 button.button-primary {
@@ -123,12 +127,23 @@ button.button-primary {
 }
 
 @media screen and (max-width: 696px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
     #login {
-        width: auto;
-        padding: 16px;
+        width: 100%;
+        height: 100%;
     }
 
     button.button-primary {
         min-height: fit-content;
+    }
+}
+
+@media screen and (min-width: 697px) and (max-width: 1366px) {
+    #login {
+        width: 60vw;
+        padding: 0;
     }
 }

@@ -7,10 +7,10 @@ body {
     color: $black;
     display: flex;
     flex-direction: column;
+    font-family: 'Lato', sans-serif;
     justify-content: center;
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
 }
 
 h1 {
@@ -35,20 +35,20 @@ h3 {
 }
 
 #checkout {
-    display: flex;
     align-items: center;
+    display: flex;
     width: 80%;
 }
 
 button.button-primary {
+    background-color: #EF2917;
     border: none;
     border-radius: 4px;
-    background-color: #EF2917;
+    border-right: 3px solid darken(#ef2917, 15%);
+    border-bottom: 3px solid darken(#ef2917, 15%);
     color: $white;
     font-weight: 700;
     padding: 8px 16px;
-    border-right: 3px solid darken(#ef2917, 15%);
-    border-bottom: 3px solid darken(#ef2917, 15%);
 }
 
 .container {
@@ -72,27 +72,27 @@ button.button-primary {
 .form-group {
     display: flex;
     flex-direction: column;
-    min-height: fit-content;
-    width: 80%;
     font-weight: 700;
     margin: 16px 0;
+    min-height: fit-content;
+    width: 80%;
     label {
         padding: 4px 8px;
     }
     input,
     select {
         background-color: lighten($orange, 35%);
-        box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
         border: none; //border: 2px solid darken($orange, 5%);
-        padding: 8px;
+        box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
         height: 32px;
+        padding: 8px;
         width: 66%;
+        &:focus {
+            outline: none;
+        }
         &::placeholder {
             letter-spacing: 2px;
             color: lighten($black, 35%);
-        }
-        &:focus {
-            outline: none;
         }
     }
 
@@ -132,42 +132,41 @@ button.button-primary {
 }
 
 .payment-info {
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    background: linear-gradient(90deg, lighten($orange, 12%), lighten($orange, 18%));
     border: 2px solid darken($orange, 5%);
     border-left: none;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
-    padding: 16px;
-    background: linear-gradient(90deg, lighten($orange, 12%), lighten($orange, 18%));
-    flex: 3;
-    position: relative;
-    left: -2px;
-    height: 55%;
     box-shadow: 10px 12px 16px 2px lighten($orange, 30%);
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    height: 55%;
+    left: -2px;
+    padding: 16px;
+    position: relative;
     z-index: 1000;
 }
 
 .item-description {
-    box-shadow: 10px 12px 16px 2px lighten($orange, 30%);
-    border: 2px solid darken($orange, 5%);
-    padding: 16px;
-    flex: 5;
-    border-radius: 12px;
     align-items: center;
-    justify-content: center;
     background: linear-gradient(90deg, $orange, lighten($orange, 12%));
-
-    background-color: $orange;
+    border: 2px solid darken($orange, 5%);
+    border-radius: 12px;
+    box-shadow: 10px 12px 16px 2px lighten($orange, 30%);
     display: flex;
+    flex: 5;
     flex-direction: column;
+    height: 70%;
+    justify-content: center;
+    padding: 16px;
+    z-index: 500;
+
     p {
         max-width: 65%;
         text-align: center;
     }
-    height: 70%;
-    z-index: 500;
     img {
         background-color: rgba(0, 0, 0, 0.2);
         border-radius: 2px;
@@ -185,13 +184,13 @@ button.button-primary {
     }
 
     .payment-info, .item-description {
-        margin: 0 0 32px 0;
-        box-shadow: 0px 12px 16px 2px lighten($orange, 30%);
-        position: initial;
         border-left: none;
         border-right: none;
         border-radius: 0;
+        box-shadow: 0px 12px 16px 2px lighten($orange, 30%);
         height: auto;
+        margin: 0 0 32px 0;
+        position: initial;
     }
 
     .item-description p {

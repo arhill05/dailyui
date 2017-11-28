@@ -45,6 +45,7 @@ button.button-primary {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  min-height: fit-content;
   width: 80%; }
   .container .two-third {
     flex: 2 2 65%;
@@ -57,6 +58,7 @@ button.button-primary {
 .form-group {
   display: flex;
   flex-direction: column;
+  min-height: fit-content;
   width: 80%;
   font-weight: 700;
   margin: 16px 0; }
@@ -149,6 +151,7 @@ button.button-primary {
     position: initial;
     border-left: none;
     border-right: none;
-    border-radius: 0; }
+    border-radius: 0;
+    height: auto; }
   .item-description p {
     max-width: 85%; } }
